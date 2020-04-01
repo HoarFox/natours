@@ -10,15 +10,20 @@
     "prefix:css(test)": "npx postcss --use autoprefixer -b 'last 5 versions' css/style.concat.css -o css/style.prefix.css",
     "prefix:css": "npx postcss css/style.concat.css --use autoprefixer -o css/style.prefix.css",
     "compress:css": "npx node-sass css/style.prefix.css dist/css/style.css --output-style compressed",
-    "build": "npx npm-run-all comlile:sass concat:css prefix:css compress:css"
+    "build": "npx npm-run-all comlile:sass concat:css prefix:css compress:css",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
+  "homepage": "https://hoarfox.github.io/natours",
   "devDependencies": {
     "autoprefixer": "^9.7.5",
     "concat": "^1.0.3",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.0"
+  },
+  "dependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
