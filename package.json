@@ -4,12 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "npx node-sass sass/main.scss css/style.css -w",
-    "dev": "concurrently \"npx node-sass sass/main.scss css/style.css -w\" \"npx live-server\""
+    "dev": "concurrently \"npx node-sass sass/main.scss dist/css/style.css -w\" \"npx live-server dist/ \"",
+    "comlile:sass": "npx node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "npx concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:css(test)": "npx postcss --use autoprefixer -b 'last 5 versions' css/style.concat.css -o css/style.prefix.css",
+    "prefix:css": "npx postcss css/style.concat.css --use autoprefixer -o css/style.prefix.css",
+    "compress:css": "npx node-sass css/style.prefix.css dist/css/style.css --output-style compressed",
+    "build": "npx npm-run-all comlile:sass concat:css prefix:css compress:css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.13.1"
+    "autoprefixer": "^9.7.5",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
   }
 }
