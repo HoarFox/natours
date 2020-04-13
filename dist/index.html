@@ -135,7 +135,7 @@
 
           <div class="col-1-of-4">
             <div class="feature-box">
-              <!-- <i class="feature-box__icon icon-basic-compass"></i> -->
+              
               <svg class="feature-box__icon" >
                 <use href="img/sprite.svg#compass" ></use>
                 <!-- xlink:href -->
@@ -152,7 +152,7 @@
 
           <div class="col-1-of-4">
             <div class="feature-box">
-              <!-- <i class="feature-box__icon icon-basic-map"></i> -->
+              
               <svg class="feature-box__icon" >
                 <use href="img/sprite.svg#map" ></use>
                 <!-- xlink:href -->
@@ -169,7 +169,7 @@
 
           <div class="col-1-of-4">
             <div class="feature-box">
-              <!-- <i class="feature-box__icon icon-basic-heart"></i> -->
+              
               <svg class="feature-box__icon" >
                 <use href="img/sprite.svg#heart" ></use>
                 <!-- xlink:href -->
@@ -297,8 +297,9 @@
       </section>
 
       <section class="section-stories">
-        <div class="bg-video">
+        <div class="bg-video"  >
           <video class="bg-video__content" autoplay muted loop>
+            <!-- style="display: none;" preload="none"-->
             <source src="img/video.mp4" type="video/mp4"></source>
             <source src="img/video.webm" type="video/webm"></source>
             Your browser is not supported!
@@ -314,11 +315,17 @@
         <div class="row">
           <div class="story">
             <figure class="story__shape">
-              <img
+
+              <img srcset="img/nat-8-small.jpg 300w, img/nat-8.jpg 1000w" 
+              alt="Person on a tour" 
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 14.1em" 
+              class="story__img"
+              src="img/nat-8.jpg">
+              <!-- <img
                 src="img/nat-8.jpg"
                 alt="Person on a tour"
                 class="story__img"
-              />
+              /> -->
               <figcaption class="story__caption">Mary Smith</figcaption>
             </figure>
             <div class="story__text">
@@ -338,11 +345,16 @@
         <div class="row">
           <div class="story">
             <figure class="story__shape">
-              <img
+              <img srcset="img/nat-9-small.jpg 300w, img/nat-9.jpg 1000w" 
+              alt="Person on a tour" 
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 14.1em" 
+              class="story__img"
+              src="img/nat-9.jpg">
+              <!-- <img
                 src="img/nat-9.jpg"
                 alt="Person on a tour"
                 class="story__img"
-              />
+              /> -->
               <figcaption class="story__caption">Jack Wilson</figcaption>
             </figure>
             <div class="story__text">
@@ -419,7 +431,7 @@
 
         <picture class="footer__logo">
           <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
-            <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png">
+          <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png">
         </picture>
         
       </div>
@@ -536,16 +548,5 @@
     </section>
 
      -->
-    <script>
-      function myFunction() {
-        let elmnt = document.getElementById("section-tours");focusedSection
-        elmnt.scrollIntoView();
-      }
-      setTimeout(() => {
-        myFunction();
-      }, 0);
-      
-      
-    </script>
   </body>
 </html>
