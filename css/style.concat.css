@@ -1501,7 +1501,7 @@ body {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
   @media only screen and (max-width: 75em) {
     .section-book {
-      padding: 15rem 2rem; } }
+      padding: 15rem 0; } }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/nat-10.jpg);
