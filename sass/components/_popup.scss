@@ -124,11 +124,17 @@
     background-position: center;
 
     &--1 {
-      background-image: url(../img/nat-8.jpg);
+      background-image: url(../img/nat-8-small.jpg);
       top: 0;
       left: 0;
       bottom: 50%;
       right: 0;
+
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+        (min-width: 125em) {
+        background-image: url(../img/nat-8.jpg);
+      }
 
       @include respond(tab-port) {
         top: 0;
@@ -139,11 +145,17 @@
     }
 
     &--2 {
-      background-image: url(../img/nat-9.jpg);
+      background-image: url(../img/nat-9-small.jpg);
       top: 50%;
       left: 0;
       bottom: 0;
       right: 0;
+
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+        (min-width: 125em) {
+        background-image: url(../img/nat-9.jpg);
+      }
 
       @include respond(tab-port) {
         top: 0;
