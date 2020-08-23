@@ -1322,7 +1322,8 @@ body {
     padding-top: 2rem;
     color: #f7f7f7;
     width: 80%;
-    float: right; }
+    float: right;
+    text-align: center; }
     @media only screen and (max-width: 56.25em) {
       .footer__copyright {
         width: 100%;
